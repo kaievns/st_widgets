@@ -1,0 +1,76 @@
+/* standard icons styles */
+a.new, a.show, a.back, a.edit, a.destroy {
+  padding-left: 14px;
+  background-position: left 3px;
+  background-repeat: no-repeat;
+}
+a.new     { background-image: url('/images/icons/st_widgets/10/new.png');  }
+a.show    { background-image: url('/images/icons/st_widgets/10/show.png'); }
+a.back    { background-image: url('/images/icons/st_widgets/10/arrow_back.png'); }
+a.edit    { background-image: url('/images/icons/st_widgets/10/edit.png');    color: green; }
+a.destroy { background-image: url('/images/icons/st_widgets/10/delete.png'); color: red;   }
+
+/* a big nice "Create Me" button */
+a.new-big {
+  display: block;
+  text-decoration: none;
+  border: 1px solid #080;
+  background-color: #DFD;
+  color: #080;
+  font-weight: bold;
+  height: 20px;
+  line-height: 20px;
+  padding-left: 24px;
+  background-position: 2px center;
+  background-repeat: no-repeat;
+  background-image: url('/images/icons/st_widgets/16/plus_circle_frame.png');
+}
+a.new-big:hover {
+  background-color: #DFF;
+}
+
+/* the user-notifications block styles */
+div#flashes {
+}
+div#flashes div.notice, div#flashes div.error, div#flashes div.info {
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+  padding-left: 40px;
+  background-repeat: no-repeat;
+  background-position: 10pt center;
+}
+div#flashes div.notice {
+  border-color: #080;
+  color: #080;
+  background-color: #DFD;
+  background-image: url('/images/icons/st_widgets/16/tick_circle_frame.png');
+}
+div#flashes div.error {
+  border-color: #800;
+  color: #800;
+  background-color: #FDD;
+  background-image: url('/images/icons/st_widgets/16/minus_circle_frame.png');
+}
+div#flashes div.info {
+  border-color: #008;
+  color: #008;
+  background-color: #DDF;
+  background-image: url('/images/icons/st_widgets/16/information_frame.png');
+}
+
+/* the actions block styles */
+div.actions {
+  margin-top: 10pt;
+}
+div.records div.actions {
+  margin-top: 0;
+}
+
+/* the buttons block styles */
+p.buttons {
+  padding-top: 10pt;
+}
+p.buttons input {
+  
+}

@@ -1,0 +1,3 @@
+module StWidgets::TableHelper
+  
+end
