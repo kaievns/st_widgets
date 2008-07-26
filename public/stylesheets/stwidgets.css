@@ -4,11 +4,11 @@ a.new, a.show, a.back, a.edit, a.destroy {
   background-position: left 3px;
   background-repeat: no-repeat;
 }
-a.new     { background-image: url('/images/icons/st_widgets/10/new.png');  }
-a.show    { background-image: url('/images/icons/st_widgets/10/show.png'); }
-a.back    { background-image: url('/images/icons/st_widgets/10/arrow_back.png'); }
-a.edit    { background-image: url('/images/icons/st_widgets/10/edit.png');    color: green; }
-a.destroy { background-image: url('/images/icons/st_widgets/10/delete.png'); color: red;   }
+a.new     { background-image: url('/images/icons/stwidgets/10/new.png');  }
+a.show    { background-image: url('/images/icons/stwidgets/10/show.png'); }
+a.back    { background-image: url('/images/icons/stwidgets/10/arrow_back.png'); }
+a.edit    { background-image: url('/images/icons/stwidgets/10/edit.png');    color: green; }
+a.destroy { background-image: url('/images/icons/stwidgets/10/delete.png'); color: red;   }
 
 /* a big nice "Create Me" button */
 a.new-big {
@@ -23,7 +23,7 @@ a.new-big {
   padding-left: 24px;
   background-position: 2px center;
   background-repeat: no-repeat;
-  background-image: url('/images/icons/st_widgets/16/plus_circle_frame.png');
+  background-image: url('/images/icons/stwidgets/16/plus_circle_frame.png');
 }
 a.new-big:hover {
   background-color: #DFF;
@@ -44,19 +44,19 @@ div#flashes div.notice {
   border-color: #080;
   color: #080;
   background-color: #DFD;
-  background-image: url('/images/icons/st_widgets/16/tick_circle_frame.png');
+  background-image: url('/images/icons/stwidgets/16/tick_circle_frame.png');
 }
 div#flashes div.error {
   border-color: #800;
   color: #800;
   background-color: #FDD;
-  background-image: url('/images/icons/st_widgets/16/minus_circle_frame.png');
+  background-image: url('/images/icons/stwidgets/16/minus_circle_frame.png');
 }
 div#flashes div.info {
   border-color: #008;
   color: #008;
   background-color: #DDF;
-  background-image: url('/images/icons/st_widgets/16/information_frame.png');
+  background-image: url('/images/icons/stwidgets/16/information_frame.png');
 }
 
 /* the actions block styles */

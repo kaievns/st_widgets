@@ -1,16 +1,15 @@
 StWidgets
 ====
 
-StWidgets is a collection of some frequently used widgets. Those are
-pretty some helper methods which allows you more easily create tables,
-links, menus, form elements and so one.
+StWidgets is a collection of some frequently used widgets for
+ruby-on-rails. Those are some helper methods which allows you more
+easily create tables, links, menus, form elements and so one.
+
 
 NOTE:
   All the icons has been taken from http://www.pinvoke.com where
   licensed under a Creative Commons Attribution 3.0 license.
 
 
-
-
-Copyright (c) 2008 [Nikolay V. Nemshilov aka St. <nemshilov@gmail.com>],
+Copyright (c) 2008 [Nikolay V. Nemshilov aka St. nemshilov(a)gm-ail-com],
  released under the MIT license
