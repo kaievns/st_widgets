@@ -67,10 +67,58 @@ div.records div.actions {
   margin-top: 0;
 }
 
+/* the form entries common styles */
+form p {
+}
+
+form p label {
+  display: block;
+  font-weight: bold;
+}
+
+form p.required label {
+}
+
+form p.required label:after {
+  content: '*';
+  color: red;
+  margin-left: 4pt;
+}
+
 /* the buttons block styles */
 p.buttons {
   padding-top: 10pt;
 }
 p.buttons input {
   
+}
+
+/* lists styles */
+li.odd, dd.odd {
+  
+}
+
+li.even, dd.even {
+  background-color: #EEE;
+}
+
+li.odd:hover, dd.odd:hover, li.even:hover, dd.even:hover {
+  background-color: #FEF;
+}
+
+ul.states {
+  list-style: none;
+}
+ul.states li {
+  margin: 0;
+  padding: 0;
+  padding-left: 22px;
+  background-repeat: no-repeat;
+  background-position: 2px center;
+}
+ul.states li.true {
+  background-image: url('/images/icons/stwidgets/16/tick_circle.png');
+}
+ul.states li.false {
+  background-image: url('/images/icons/stwidgets/16/minus_circle.png');
 }

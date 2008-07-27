@@ -32,38 +32,38 @@ class FormHelperTest < Test::Unit::TestCase
   
   # tests
   def test_reset_button_tag
-    assert_equal '<input value="Reset" type="reset"/>', reset_button_tag
+    assert_equal '<input type="reset" value="Reset"/>', reset_button_tag
   end
   
   def test_reset_button_tag_with_title_and_class
-    assert_equal '<input value="Clear" class="reset" type="reset"/>', 
+    assert_equal '<input class="reset" type="reset" value="Clear"/>', 
       reset_button_tag("Clear", :class => "reset")
   end
   
   def test_buttons_block_simple
     assert_equal '<p class="buttons">'+
-                   '<input value="Create" type="submit"/>  '+
-                   '<input value="Reset" type="reset"/>'+
+                   '<input type="submit" value="Create"/>  '+
+                   '<input type="reset" value="Reset"/>'+
                  '</p>', buttons_block('Create')
   end
   
   def test_buttons_block_with_options
     assert_equal '<p class="buttons">'+
-                   '<input id="submit-id" value="Create" type="submit"/>  '+
-                   '<input value="Reset" type="reset"/>'+
+                   '<input id="submit-id" type="submit" value="Create"/>  '+
+                   '<input type="reset" value="Reset"/>'+
                  '</p>', buttons_block('Create', :id => 'submit-id')
   end
   
   def test_buttons_block_without_reset
     assert_equal '<p class="buttons">'+
-                   '<input value="Create" type="submit"/> '+
+                   '<input type="submit" value="Create"/> '+
                  '</p>', buttons_block('Create', :noreset => true)
   end
   
   def test_buttons_block_with_block
     assert_equal '<p class="buttons">'+
-                   '<input value="Create" type="submit"/> some text '+
-                   '<input value="Reset" type="reset"/>'+
+                   '<input type="submit" value="Create"/> some text '+
+                   '<input type="reset" value="Reset"/>'+
                  '</p>', buttons_block('Create'){ 'some text' }
   end
   
@@ -96,7 +96,7 @@ class FormHelperTest < Test::Unit::TestCase
   end
   
   def test_form_entry_required_with_custom_label_and_options
-    assert_equal '<p id="some-id" class="bla required">'+
+    assert_equal '<p class="bla required" id="some-id">'+
                    '<label for="foo_bla">Label</label> '+
                    'some input'+
                  '</p>', form_entry(:foo, :bla, 'Label', :required => true, 
@@ -120,7 +120,7 @@ class FormHelperTest < Test::Unit::TestCase
   def test_form_field_block_with_custom_label_and_options
     assert_equal '<p class="required">'+
                    '<label for="foo_bla">Label</label> '+
-                   '<input id="foo_bla" name="foo[bla]" type="text" class="bla"/>'+
+                   '<input class="bla" id="foo_bla" name="foo[bla]" type="text"/>'+
                  '</p>', form_field_block(:text_field, :foo, :bla, "Label", 
                                           :required => true, :class => "bla")
   end

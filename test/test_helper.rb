@@ -22,7 +22,7 @@ module FakeHelpers
   end
   
   def options_str(options)
-    options = options.sort {|a,b| a[0].to_s == 'href' ? -1 : 1
+    options = options.sort {|a,b| a[0].to_s <=> b[0].to_s
                 }.collect{ |k, v| "#{k}=\"#{v}\"" 
                 }.select{ |s| s[-3,s.size] != '=""'}.join(' ')
     options = ' ' + options if options.size > 0
@@ -35,6 +35,24 @@ module FakeHelpers
   
   def concat(string, binding)
     string
+  end
+  
+  def cycle(*args)
+    @cycles ||= []
+    cycl = @cycles.find{ |c| c[:list] == args }
+    if !cycl
+      cycl = { :list => args, :last => args.size-1 }
+      @cycles << cycl
+    end
+    
+    cycl[:last] += 1
+    cycl[:last] = 0 if cycl[:last] >= cycl[:list].size
+    
+    cycl[:list][cycl[:last]]
+  end
+  
+  def h(str)
+    str
   end
 end
 
