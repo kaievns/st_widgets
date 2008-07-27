@@ -94,6 +94,11 @@ p.buttons input {
 }
 
 /* lists styles */
+ul, ol {
+  margin: 0;
+  padding: 0;
+  padding-left: 10pt;
+}
 li.odd, dd.odd {
   
 }
