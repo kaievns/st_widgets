@@ -116,6 +116,8 @@ module StWidgets::FormHelper
       options.delete :required
     end
     
+    object = nil if object.is_a? ActionView::Helpers::FormBuilder
+    
     # execute the block
     begin
       concat content_tag(:p, label(object, method, text)+' '+
