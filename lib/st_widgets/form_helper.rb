@@ -151,8 +151,18 @@ module StWidgets::FormHelper
       options.delete :required
     end
     
+    if options[:form]
+      form = options[:form]
+      options.delete :form
+    end
+    
     form_entry(object, method, text, entry_options) { 
-      send(type, object, method, options) }
+      if form
+        form.send(type, method, options)
+      else
+        send(type, object, method, options)
+      end
+    }
   end
   
   #

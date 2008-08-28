@@ -11,3 +11,12 @@ ActionController::Base.class_eval {
          StWidgets::FormHelper, 
          StWidgets::TableHelper
 }
+
+# fake gettext initialization if there's no such thing
+unless defined? GetText
+  ActionView::Base.class_eval { 
+    def _(text, *args)
+      text
+    end
+  }
+end

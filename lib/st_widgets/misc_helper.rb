@@ -123,4 +123,19 @@ module StWidgets::MiscHelper
       end
     }, options.reject{ |k, v| [:type, :escape, :stripy, :recoursive].include?(k) }
   end
+  
+  #
+  # converts a time object into a string
+  # checks possible collisions
+  # 
+  def d(date)
+    date.to_s(:short) if date.is_a? Time
+  end
+  
+  #
+  # Returns a Yes/No string for the given boolean value
+  #
+  def yes_no(value)
+    content_tag :span, value ? _('Yes') : _('No'), :class => value ? 'yes' : 'no'
+  end
 end
