@@ -143,19 +143,24 @@ module StWidgets::FormHelper
   #
   def form_field_block(type, object, method, *args)
     text = args.first.is_a?(String) ? args.shift : nil
-    options = args.last.is_a?(Hash) ? args.pop : { }
+    options = args.last.is_a?(Hash) ? args.last : { }
     
     entry_options = { }
     if options[:required]
       entry_options[:required] = options[:required]
-      options.delete :required
+      args.last.delete :required
+    end
+    
+    # handling the case of associations massassignment
+    if text.nil? and method.to_s.ends_with? "_ids"
+      text = method.to_s[0, method.to_s.size-4].pluralize.gsub('_', ' ').capitalize
     end
     
     form_entry(object, method, text, entry_options) { 
       if object.is_a? ActionView::Helpers::FormBuilder
-        object.send(type, method, options)
+        object.send(type, method, *args)
       else
-        send(type, object, method, options)
+        send(type, object, method, *args)
       end
     }
   end
@@ -180,5 +185,9 @@ module StWidgets::FormHelper
   # of the text-area type
   def text_area_block(object, method, *args)
     form_field_block :text_area, object, method, *args
+  end
+  
+  def select_block(object, method, *args)
+    form_field_block :select, object, method, *args
   end
 end
