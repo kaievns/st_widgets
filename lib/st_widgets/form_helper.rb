@@ -189,7 +189,17 @@ module StWidgets::FormHelper
     form_field_block :text_area, object, method, *args
   end
   
+  #
+  # Shortcut, generates a select menu form element block
+  #
   def select_block(object, method, *args)
     form_field_block :select, object, method, *args
+  end
+  
+  #
+  # Shortcut, generates an input-file form element block
+  #
+  def file_field_block(object, method, *args)
+    form_field_block :file_field, object, method, *args
   end
 end

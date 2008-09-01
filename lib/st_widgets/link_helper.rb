@@ -88,4 +88,6 @@ module StWidgets::LinkHelper
     link_to _('Destroy'), url, { :class => 'destroy', 
       :confirm => _('Are you sure?'), :method => :delete }.merge(options)
   end
+  
+  alias :link_to_delete :link_to_destroy
 end
