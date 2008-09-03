@@ -10,7 +10,9 @@ module StWidgets::MiscHelper
   #
   def menu_link(title, url, options={ })
     content_tag :li, link_to(title, url, options), :class => 
-      request.request_uri[0, url.size] == url ? :current : nil
+      ((request.request_uri[0, url.size] == url and url.size > 1) or
+       (url == "/" and request.request_uri == "/")
+       ) ? :current : nil
   end
   
   #
