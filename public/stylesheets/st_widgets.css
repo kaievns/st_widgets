@@ -1,5 +1,5 @@
 /* standard icons styles */
-a.new, a.show, a.back, a.edit, a.destroy, a.reply {
+a.new, a.show, a.back, a.edit, a.destroy, a.reply, a.lift, a.drop {
   padding-left: 14px;
   background-position: left 3px;
   background-repeat: no-repeat;
@@ -10,6 +10,8 @@ a.back    { background-image: url('/images/icons/st_widgets/10/arrow_back.png');
 a.edit    { background-image: url('/images/icons/st_widgets/10/edit.png');    color: green; }
 a.destroy { background-image: url('/images/icons/st_widgets/10/delete.png'); color: red;   }
 a.reply   { background-image: url('/images/icons/st_widgets/10/reply.png'); }
+a.lift    { background-image: url('/images/icons/st_widgets/10/arrow_up.png'); }
+a.drop    { background-image: url('/images/icons/st_widgets/10/arrow_down.png'); }
 
 /* a big nice "Create Me" button */
 a.new-big {
