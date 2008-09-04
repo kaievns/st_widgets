@@ -1,5 +1,5 @@
 /* standard icons styles */
-a.new, a.show, a.back, a.edit, a.destroy {
+a.new, a.show, a.back, a.edit, a.destroy, a.reply {
   padding-left: 14px;
   background-position: left 3px;
   background-repeat: no-repeat;
@@ -9,6 +9,7 @@ a.show    { background-image: url('/images/icons/st_widgets/10/show.png'); }
 a.back    { background-image: url('/images/icons/st_widgets/10/arrow_back.png'); }
 a.edit    { background-image: url('/images/icons/st_widgets/10/edit.png');    color: green; }
 a.destroy { background-image: url('/images/icons/st_widgets/10/delete.png'); color: red;   }
+a.reply   { background-image: url('/images/icons/st_widgets/10/reply.png'); }
 
 /* a big nice "Create Me" button */
 a.new-big {
@@ -108,7 +109,7 @@ li.even, dd.even {
 }
 
 li.odd:hover, dd.odd:hover, li.even:hover, dd.even:hover {
-  background-color: #FEF;
+  background-color: #FFE;
 }
 
 ul.states {
