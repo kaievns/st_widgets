@@ -202,4 +202,29 @@ module StWidgets::FormHelper
   def file_field_block(object, method, *args)
     form_field_block :file_field, object, method, *args
   end
+  
+  #
+  # creates a check-box block entry
+  #
+  def check_box_block(object, method, *args)
+    text = args.first.is_a?(String) ? args.shift : nil
+    options = args.last.is_a?(Hash) ? args.pop : { }
+    
+    p_class = options[:required] ? "required" : nil
+    options.delete :required
+    
+    if object.is_a? ActionView::Helpers::FormBuilder
+      checkbox = object.check_box method, options
+      object = nil 
+    else
+      checkbox = check_box(object, method, options)
+    end
+    
+    # putting the checkbox inside the label
+    label = label(object, method, text)
+    label_start = label[/<label.*?>/im]
+    label = label[0, label_start.size] + checkbox + label[label_start.size, label.size]
+    
+    content_tag(:p, label, :class => p_class)
+  end
 end
