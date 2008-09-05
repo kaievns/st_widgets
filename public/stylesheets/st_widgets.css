@@ -123,6 +123,7 @@ ul.states li {
   padding-left: 22px;
   background-repeat: no-repeat;
   background-position: 2px center;
+  list-style: none;
 }
 ul.states li.true {
   background-image: url('/images/icons/st_widgets/16/tick_circle.png');
